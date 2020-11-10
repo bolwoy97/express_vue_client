@@ -1,6 +1,13 @@
 import axios from 'axios'
 
-const url = 'api/todos/' 
+var api_url = ''
+if(process.env.NODE_ENV === 'production'){
+  api_url = 'https://guarded-fjord-13035.herokuapp.com/';
+}else{
+  api_url = 'http://localhost:3000/';
+}
+
+const url = api_url+'api/todos/' 
 
 class PostService {
 
