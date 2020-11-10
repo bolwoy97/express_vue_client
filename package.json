@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npm i && npm run build ",
+    "start": "npm i && npm run dev ",
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
