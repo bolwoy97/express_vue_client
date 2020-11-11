@@ -8,15 +8,14 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 //app.use(express.urlencoded({ extended: true }))
 
+if(process.env.NODE_ENV === 'production'){
+  //some production code here
+}
+
+
 app.use(express.static(path.join(__dirname, 'dist')))
 app.get(/.*/, (req, res) => res.sendFile(__dirname + '/dist/index.html'));
 
-
-if(process.env.NODE_ENV === 'production'){
-    process.env.API_URL = 'http://localhost:3000';
-}else{
-    process.env.API_URL = 'http://localhost:3000';
-}
 
 
 const PORT = process.env.PORT || 8080

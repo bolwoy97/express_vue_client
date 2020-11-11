@@ -43,7 +43,7 @@ export default {
     try{
        this.todos = await PostService.get()
        this.loading = false
-       console.log (this.todos)
+       //console.log (this.todos)
     }catch(err){
       this.error = err.message
     }
